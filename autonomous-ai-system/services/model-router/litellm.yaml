@@ -1,0 +1,19 @@
+models:
+  fast: ["qwen2-7b-instruct", "mistral-7b-instruct"]
+  reason: ["mixtral-8x7b-instruct", "qwen2-72b-instruct"]
+  vision: ["llava-next"]
+  rerank: ["bge-reranker"]
+
+routes:
+  tool_use:
+    candidates: ["fast"]
+    max_latency_ms: 1200
+  verification:
+    candidates: ["reason"]
+    min_context: 8k
+  vision_tasks:
+    candidates: ["vision"]
+
+health:
+  demote_after_failures: 3
+  cooloff_seconds: 60

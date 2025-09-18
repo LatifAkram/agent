@@ -1,0 +1,7 @@
+[project]
+name = "gateway"
+version = "0.1.0"
+description = "FastAPI gateway for autonomous AI system"
+authors = [{name = "AI"}]
+requires-python = ">=3.11"
+dependencies = [\n  "fastapi>=0.112.0",\n  "uvicorn>=0.30.0",\n  "pydantic>=2.8.2",\n  "pydantic-settings>=2.4.0",\n  "redis>=5.0.8",\n  "asyncpg>=0.29.0",\n  "qdrant-client>=1.9.1",\n  "websockets>=12.0",\n]\n\n[project.optional-dependencies]\ndev = ["pytest", "httpx", "ruff"]\n\n[build-system]\nrequires = ["setuptools", "wheel"]\nbuild-backend = "setuptools.build_meta"\n
